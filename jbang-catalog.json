@@ -1,5 +1,17 @@
 {
   "catalogs": {},
-  "aliases": {},
-  "templates": {}
+  "aliases": {
+    "ktor-rest": {
+      "script-ref": "scripts/ktor-rest-server.kt",
+      "description": "Ktor Rest API server with JSON serialization"
+    }
+  },
+  "templates": {
+    "ktor-rest": {
+      "file-refs": {
+        "{basename}.kt": "scripts/ktor-rest-server.kt"
+      },
+      "description": "Ktor Rest API server with JSON serialization"
+    }
+  }
 }
