@@ -2,30 +2,29 @@
 
 //DEPS io.ktor:ktor-bom:3.0.1@pom
 //DEPS io.ktor:ktor-server-netty-jvm
-//DEPS io.ktor:ktor-serialization-kotlinx-json-jvm
+//DEPS io.ktor:ktor-serialization-jackson-jvm
 //DEPS io.ktor:ktor-server-content-negotiation-jvm
 
-import io.ktor.serialization.kotlinx.json.*
-import io.ktor.server.plugins.contentnegotiation.*
-import io.ktor.server.netty.*
-import io.ktor.server.routing.*
+import com.fasterxml.jackson.databind.SerializationFeature
+import io.ktor.serialization.jackson.*
 import io.ktor.server.application.*
-import io.ktor.http.*
-import io.ktor.server.response.*
 import io.ktor.server.engine.*
+import io.ktor.server.netty.*
+import io.ktor.server.plugins.contentnegotiation.*
+import io.ktor.server.response.*
+import io.ktor.server.routing.*
 
-@Serializable
-data class Project(val name: String, val language: String)
+data class Todo(val title: String, val isCompleted: Boolean)
 
 fun main(args: Array<String>) {
+    val todos = listOf(Todo("Sleep", false), Todo("Eat", true))
+    print(todos)
     embeddedServer(Netty, 8080) {
         install(ContentNegotiation) {
-            json()
-        }
-        routing {
-            get("/") {
-                call.respond(mapOf("hello" to "world"))
+            jackson {
+                enable(SerializationFeature.INDENT_OUTPUT)
             }
         }
+        routing { get("/") { call.respond(todos) } }
     }.start(wait = true)
 }
