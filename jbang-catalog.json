@@ -12,6 +12,12 @@
         "{basename}.kt": "scripts/ktor-rest-server.kt"
       },
       "description": "Ktor Rest API server with JSON serialization"
+    },
+    "javafx": {
+      "file-refs": {
+        "{basename}.java": "templates/javafx.java.qute"
+      },
+      "description": "A starter JavaFX app"
     }
   }
 }
