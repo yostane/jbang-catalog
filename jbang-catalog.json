@@ -1,10 +1,22 @@
 {
   "catalogs": {},
   "aliases": {
+    "palcli": {
+		"script-ref": "scripts/paltools/palcli.java",
+		"description": "Palindrome tester CLI"
+	  },
+    "palqrest": {
+		"script-ref": "scripts/paltools/palqrest.java",
+		"description": "Palindrome tester Quarkus Rest API"
+	  },
     "ktor-rest": {
       "script-ref": "scripts/ktor-rest-server.kt",
       "description": "Ktor Rest API server with JSON serialization"
-    }
+    },
+    "hellojfx": {
+		"script-ref": "scripts/hellojfx.java",
+		"description": "Basic JavaFX window that shows Java and JavaFx versions"
+	  }
   },
   "templates": {
     "ktor-rest": {
