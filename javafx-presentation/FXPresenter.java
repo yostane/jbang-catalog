@@ -4,6 +4,8 @@
 //DEPS org.openjfx:javafx-fxml:21
 //SOURCES Slide.java
 //SOURCES Presentation.java
+//FILES style.css
+//FILES JavaFX_Logo.png
 //FILES slide1.fxml
 //FILES slide2.fxml
 
@@ -26,8 +28,9 @@ public class FXPresenter extends Application {
         presentation.addSlide(new Slide("slide2.fxml"));
 
         final Scene scene = new Scene(presentation);
+        scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
         stage.setScene(scene);
-        stage.setFullScreen(true);
+        // stage.setFullScreen(true);
         presentation.start();
         List<Screen> screens = Screen.getScreens();
         Logger.getGlobal().log(Level.INFO, "loaded scenes {0}", screens.size());

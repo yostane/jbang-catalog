@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<fx:root type="javafx.scene.layout.AnchorPane" id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1">
-  <children>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 
-    <Button layoutX="126" layoutY="90" text="Click Me!"/>
-    <Label layoutX="126" layoutY="120" minHeight="16" minWidth="69"/>
-  </children>
+<fx:root id="AnchorPane" prefHeight="360.0" prefWidth="640.0" styleClass="root" stylesheets="@style.css" type="AnchorPane" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="283.0" layoutY="33.0" styleClass="h1" text="JBang" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="220.0" layoutY="122.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
 </fx:root>
