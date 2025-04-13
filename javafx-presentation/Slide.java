@@ -18,6 +18,11 @@ public class Slide extends AnchorPane implements Initializable {
         }
     }
 
+    public void handleClick() throws IOException {
+        String[] args = new String[] { "/bin/bash", "-c", "echo", "'hello'" };
+        Process proc = new ProcessBuilder(args).start();
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
     }

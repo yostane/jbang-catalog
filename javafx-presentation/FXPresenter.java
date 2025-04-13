@@ -5,7 +5,6 @@
 //SOURCES Slide.java
 //SOURCES Presentation.java
 //FILES style.css
-//FILES JavaFX_Logo.png
 //FILES slide1.fxml
 //FILES slide2.fxml
 
