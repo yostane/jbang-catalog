@@ -16,7 +16,11 @@
     "hellojfx": {
 		"script-ref": "scripts/hellojfx.java",
 		"description": "Basic JavaFX window that shows Java and JavaFx versions"
-	  }
+	  },
+    "javafx-presentation": {
+      "script-ref": "javafx-presentation/FXPresenter.java",
+      "description": "A presentation made with JavaFX"
+    }
   },
   "templates": {
     "ktor-rest": {
@@ -30,6 +34,12 @@
         "{basename}.java": "templates/javafx.java.qute"
       },
       "description": "A starter JavaFX app"
+    },
+    "javafx-presentation": {
+      "file-refs": {
+        "{basename}.java": "javafx-presentation/FXPresenter.java.qute"
+      },
+      "description": "A presentation made with JavaFX"
     }
   }
 }
