@@ -1,11 +1,14 @@
 {
-	"folders": [
-		{
-			"path": "."
-		},
-		{
-			"path": "javafx-presentation"
-		}
-	],
-	"settings": {}
+    "folders": [
+        {
+            "path": "."
+        },
+        {
+            "path": "javafx-presentation"
+        },
+        {
+            "path": "jbang-devoxxuk2025"
+        }
+    ],
+    "settings": {}
 }
