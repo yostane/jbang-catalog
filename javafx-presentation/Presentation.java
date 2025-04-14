@@ -55,6 +55,9 @@ public class Presentation extends Group {
         }
         current = slides.get(index);
         current.addEventHandler(KeyEvent.KEY_PRESSED, keyEventHandler);
+        for (var node : current.getChildren()) {
+            node.addEventHandler(KeyEvent.KEY_PRESSED, keyEventHandler);
+        }
 
         scaleToFit();
         getChildren().add(slides.get(index));

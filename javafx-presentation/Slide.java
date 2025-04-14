@@ -1,6 +1,8 @@
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Logger;
+
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
@@ -19,8 +21,7 @@ public class Slide extends AnchorPane implements Initializable {
     }
 
     public void handleClick() throws IOException {
-        String[] args = new String[] { "/bin/bash", "-c", "echo", "'hello'" };
-        Process proc = new ProcessBuilder(args).start();
+        Logger.getGlobal().info("Button clicked");
     }
 
     @Override
