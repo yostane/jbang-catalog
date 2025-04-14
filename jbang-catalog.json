@@ -37,7 +37,12 @@
     },
     "javafx-presentation": {
       "file-refs": {
-        "{basename}.java": "javafx-presentation/FXPresenter.java.qute"
+        "{basename}.java": "javafx-presentation/FXPresenter.java.qute",
+        "Slide.java": "javafx-presentation/Slide.java",
+        "Presentation.java": "javafx-presentation/Presentation.java",
+        "slide1.fxml": "javafx-presentation/slide1.fxml",
+        "slide2.fxml": "javafx-presentation/slide2.fxml",
+        "style.css": "javafx-presentation/style.css"
       },
       "description": "A presentation made with JavaFX"
     }

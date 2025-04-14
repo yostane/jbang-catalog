@@ -17,7 +17,7 @@ import javafx.scene.Scene;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 
-public class {baseName} extends Application {
+public class jbang_devoxxuk2025 extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
@@ -29,10 +29,10 @@ public class {baseName} extends Application {
         final Scene scene = new Scene(presentation);
         scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
         stage.setScene(scene);
-        stage.setFullScreen(true);
+        // stage.setFullScreen(true);
         presentation.start();
         List<Screen> screens = Screen.getScreens();
-        Logger.getGlobal().log(Level.INFO, "loaded scenes {0}", screens.size());
+        Logger.getGlobal().log(Level.INFO, "loaded scenes 0", screens.size());
         stage.show();
     }
 
