@@ -23,6 +23,12 @@
     }
   },
   "templates": {
+    "implicit-main": {
+      "file-refs": {
+        "{basename}.kt": "templates/im.java"
+      },
+      "description": "Java file wiht Implicitly Declared Classes and Instance Main Method"
+    },
     "ktor-rest": {
       "file-refs": {
         "{basename}.kt": "scripts/ktor-rest-server.kt"
