@@ -25,7 +25,7 @@
   "templates": {
     "implicit-main": {
       "file-refs": {
-        "{basename}.kt": "templates/im.java"
+        "{basename}.java": "templates/im.java"
       },
       "description": "Java file wiht Implicitly Declared Classes and Instance Main Method"
     },
