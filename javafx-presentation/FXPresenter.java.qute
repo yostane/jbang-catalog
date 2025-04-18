@@ -2,6 +2,7 @@
 //DEPS org.openjfx:javafx-controls:21
 //DEPS org.openjfx:javafx-graphics:21
 //DEPS org.openjfx:javafx-fxml:21
+//JAVA 21
 //SOURCES Slide.java
 //SOURCES Presentation.java
 //FILES style.css
