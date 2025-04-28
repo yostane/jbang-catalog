@@ -27,7 +27,13 @@
       "file-refs": {
         "{basename}.java": "templates/im.java"
       },
-      "description": "Java file wiht Implicitly Declared Classes and Instance Main Method"
+      "description": "Java 24 file wiht Implicitly Declared Classes and Instance Main Method"
+    },
+    "cmpact-class": {
+      "file-refs": {
+        "{basename}.java": "templates/compact.java"
+      },
+      "description": "Java 25+ file wiht that uses a compact main class"
     },
     "ktor-rest": {
       "file-refs": {
