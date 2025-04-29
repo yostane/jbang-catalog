@@ -8,6 +8,7 @@
 //FILES style.css
 //FILES slide1.fxml
 //FILES slide2.fxml
+//FILES slide3.fxml
 //FILES jbang_logo.png
 //FILES devoxx-uk-illustration.png
 //FILES WL_logo_turquoise.png
@@ -33,6 +34,7 @@ public class jbang_devoxxuk2025 extends Application {
         final Presentation presentation = new Presentation();
         presentation.addSlide(new Slide("slide1.fxml"));
         presentation.addSlide(new Slide("slide2.fxml"));
+        presentation.addSlide(new Slide("slide3.fxml"));
 
         final Scene scene = new Scene(presentation);
         scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());

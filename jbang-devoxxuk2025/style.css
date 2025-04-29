@@ -1,17 +1,23 @@
 .root {
-    -fx-font-size: 14px;
+    -fx-font-size: 22px;
     -fx-font-family: "Helvetica";
     -fx-background-color: rgb(255, 255, 255);
     -fx-text-align: center;
+    -fx-font-weight: bold;
 }
 
 .h1 {
     -fx-font-size: 46px;
-    -fx-font-weight: bold;
 }
 
 .speaker-line {
-    -fx-font-size: 22px;
+    -fx-font-size: 28px;
+}
+
+.please-visit {
+    -fx-margin-top: 20px;
+    -fx-margin-bottom: 20px;
+    -fx-text-style: italic;
 }
 
 .demo {
