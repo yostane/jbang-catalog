@@ -5,7 +5,10 @@ import java.util.logging.Logger;
 
 import javafx.animation.FadeTransition;
 import javafx.animation.Interpolator;
+import javafx.animation.ParallelTransition;
 import javafx.animation.RotateTransition;
+import javafx.animation.ScaleTransition;
+import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.image.ImageView;
@@ -13,26 +16,75 @@ import javafx.util.Duration;
 
 public class Slide1Controller implements Initializable {
 
+    private ParallelTransition pt = null;
+
     @FXML
     ImageView jbangLogo;
 
-    public void handleClick() throws IOException {
-        Logger.getGlobal().info("Button clicked");
+    @FXML
+    public void launchWithABang() {
+        if (pt != null) {
+            pt.stop();
+        }
+        jbangLogo.setScaleX(0);
+        jbangLogo.setScaleY(0);
+        ScaleTransition scaleTransition = new ScaleTransition(Duration.seconds(1), jbangLogo);
+        scaleTransition.setFromX(0);
+        scaleTransition.setToX(1.5);
+        scaleTransition.setFromY(0);
+        scaleTransition.setToY(1.5);
+        scaleTransition.setInterpolator(Interpolator.EASE_IN);
+
+        scaleTransition.setOnFinished((event) -> {
+            prepareInifiniteAnimation();
+        });
+        scaleTransition.play();
+    }
+
+    private void prepareInifiniteAnimation() {
+        RotateTransition rotateTransition = new RotateTransition(Duration.seconds(1), jbangLogo);
+        rotateTransition.setToAngle(-5);
+        ScaleTransition scaleTransition = new ScaleTransition(Duration.seconds(1), jbangLogo);
+        scaleTransition.setToX(0.9);
+        scaleTransition.setToY(0.9);
+        rotateTransition.setOnFinished((event2) -> {
+            launchRepeatedAnimation();
+        });
+        rotateTransition.play();
+        scaleTransition.play();
+    }
+
+    private void launchRepeatedAnimation() {
+        RotateTransition rotateTransition = new RotateTransition(Duration.seconds(2.5));
+        rotateTransition.setAutoReverse(true);
+        rotateTransition.setCycleCount(Timeline.INDEFINITE);
+        rotateTransition.setInterpolator(Interpolator.EASE_OUT);
+        rotateTransition.setFromAngle(-5);
+        rotateTransition.setToAngle(5);
+
+        FadeTransition fadeTransition = new FadeTransition(Duration.seconds(2));
+        fadeTransition.setFromValue(1.0);
+        fadeTransition.setToValue(0.8);
+        fadeTransition.setInterpolator(Interpolator.LINEAR);
+        fadeTransition.setAutoReverse(true);
+        fadeTransition.setCycleCount(Timeline.INDEFINITE);
+
+        ScaleTransition scaleTransition = new ScaleTransition(Duration.millis(1200));
+        scaleTransition.setFromX(0.9);
+        scaleTransition.setToX(1.1);
+        scaleTransition.setFromY(0.9);
+        scaleTransition.setToY(1.1);
+        scaleTransition.setInterpolator(Interpolator.EASE_BOTH);
+        scaleTransition.setAutoReverse(true);
+        scaleTransition.setCycleCount(Timeline.INDEFINITE);
+
+        pt = new ParallelTransition(jbangLogo, scaleTransition, fadeTransition, rotateTransition);
+        pt.play();
     }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        RotateTransition rotateTransition = new RotateTransition();
-        rotateTransition.setAutoReverse(true);
-        rotateTransition.setByAngle(180);
-        rotateTransition.setDuration();
-        rotateTransition.play();
-
-        FadeTransition transition = new FadeTransition(Duration.seconds(5), jbangLogo);
-        transition.setFromValue(1.0);
-        transition.setToValue(0);
-        transition.setInterpolator(Interpolator.LINEAR);
-
-        transition.play();
+        jbangLogo.setScaleX(0);
+        jbangLogo.setScaleY(0);
     }
 }

@@ -1,28 +1,21 @@
 .root {
     -fx-font-size: 14px;
-    -fx-font-family: "Roboto";
+    -fx-font-family: "Helvetica";
     -fx-background-color: rgb(255, 255, 255);
-}
-
-.teststyle {
-    -fx-background-color: rgb(255, 255, 255);
-    -fx-border-color: rgb(0, 0, 0);
-    -fx-border-width: 2px;
-    -fx-padding: 10px;
-    -fx-font-size: 16px;
-    -fx-font-family: "Arial Black";
-    -fx-text-fill: rgb(0, 0, 0);
+    -fx-text-align: center;
 }
 
 .h1 {
     -fx-font-size: 46px;
     -fx-font-weight: bold;
-    -fx-text-fill: rgb(0, 0, 0);
-    -fx-text-align: center;
 }
 
 .speaker-line {
-    -fx-font-size: 30px;
-    -fx-text-fill: rgb(0, 0, 0);
-    -fx-text-align: center;
+    -fx-font-size: 22px;
+}
+
+.demo {
+    -fx-font-size: 58px;
+    -fx-font-weight: bold;
+    -fx-text-fill: rgb(29, 21, 97);
 }

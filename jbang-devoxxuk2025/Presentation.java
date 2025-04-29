@@ -8,23 +8,10 @@ import javafx.stage.Screen;
 
 public class Presentation extends Group {
 
-    private List<Slide> slides;
+    private List<Slide> slides = new ArrayList<>();
     private int index;
     private Slide current;
     public EventHandler<KeyEvent> keyEventHandler;
-
-    public Presentation() {
-        this.slides = new ArrayList<>();
-        keyEventHandler = new EventHandler<KeyEvent>() {
-            public void handle(final KeyEvent keyEvent) {
-                if (keyEvent.getCode() == KeyCode.LEFT) {
-                    previousSlidePlease();
-                } else if (keyEvent.getCode() == KeyCode.RIGHT) {
-                    nextSlidePlease();
-                }
-            }
-        };
-    }
 
     public void addSlide(Slide slide) {
         addSlide(slides.size(), slide);
@@ -51,14 +38,8 @@ public class Presentation extends Group {
     public void setSlide(int index) {
         if (current != null) {
             getChildren().remove(current);
-            current.removeEventHandler(KeyEvent.KEY_PRESSED, keyEventHandler);
         }
         current = slides.get(index);
-        current.addEventHandler(KeyEvent.KEY_PRESSED, keyEventHandler);
-        for (var node : current.getChildren()) {
-            node.addEventHandler(KeyEvent.KEY_PRESSED, keyEventHandler);
-        }
-
         scaleToFit();
         getChildren().add(slides.get(index));
         current.requestFocus();

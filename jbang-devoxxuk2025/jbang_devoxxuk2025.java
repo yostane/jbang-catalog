@@ -17,7 +17,11 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import javafx.application.Application;
+import javafx.event.EventHandler;
+import javafx.event.EventType;
 import javafx.scene.Scene;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 
@@ -32,11 +36,21 @@ public class jbang_devoxxuk2025 extends Application {
 
         final Scene scene = new Scene(presentation);
         scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
+        var keyEventHandler = new EventHandler<KeyEvent>() {
+            public void handle(final KeyEvent keyEvent) {
+                if (keyEvent.getCode() == KeyCode.LEFT) {
+                    presentation.previousSlidePlease();
+                } else if (keyEvent.getCode() == KeyCode.RIGHT) {
+                    presentation.nextSlidePlease();
+                }
+            }
+        };
+        scene.setOnKeyReleased(keyEventHandler);
         stage.setScene(scene);
-        stage.setFullScreen(true);
+        // stage.setFullScreen(true);
         presentation.start();
         List<Screen> screens = Screen.getScreens();
-        Logger.getGlobal().log(Level.INFO, "loaded scenes 0", screens.size());
+        Logger.getGlobal().log(Level.INFO, "loaded scenes {0}", screens.size());
         stage.show();
     }
 
