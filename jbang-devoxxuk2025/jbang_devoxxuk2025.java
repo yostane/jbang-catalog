@@ -4,9 +4,13 @@
 //DEPS org.openjfx:javafx-fxml:21
 //SOURCES Slide.java
 //SOURCES Presentation.java
+//SOURCES Slide1Controller.java
 //FILES style.css
 //FILES slide1.fxml
 //FILES slide2.fxml
+//FILES jbang_logo.png
+//FILES devoxx-uk-illustration.png
+//FILES WL_logo_turquoise.png
 
 import java.util.List;
 import java.util.logging.Level;
@@ -29,7 +33,7 @@ public class jbang_devoxxuk2025 extends Application {
         final Scene scene = new Scene(presentation);
         scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
         stage.setScene(scene);
-        // stage.setFullScreen(true);
+        stage.setFullScreen(true);
         presentation.start();
         List<Screen> screens = Screen.getScreens();
         Logger.getGlobal().log(Level.INFO, "loaded scenes 0", screens.size());

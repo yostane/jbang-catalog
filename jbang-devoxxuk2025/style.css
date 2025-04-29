@@ -1,7 +1,7 @@
 .root {
     -fx-font-size: 14px;
-    -fx-font-family: sans-serif;
-    -fx-background-color: rgb(193, 227, 248);
+    -fx-font-family: "Roboto";
+    -fx-background-color: rgb(255, 255, 255);
 }
 
 .teststyle {
@@ -15,7 +15,14 @@
 }
 
 .h1 {
-    -fx-font-size: 36px;
+    -fx-font-size: 46px;
     -fx-font-weight: bold;
     -fx-text-fill: rgb(0, 0, 0);
+    -fx-text-align: center;
+}
+
+.speaker-line {
+    -fx-font-size: 30px;
+    -fx-text-fill: rgb(0, 0, 0);
+    -fx-text-align: center;
 }
