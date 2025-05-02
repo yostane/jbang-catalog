@@ -18,7 +18,7 @@
 		"description": "Basic JavaFX window that shows Java and JavaFx versions"
 	  },
     "javafx-presentation": {
-      "script-ref": "javafx-presentation/FXPresenter.java",
+      "script-ref": "javafx-presentation/JFXPresentation.java",
       "description": "A presentation made with JavaFX"
     },
     "devoxxuk-2025": {
@@ -53,7 +53,7 @@
     },
     "javafx-presentation": {
       "file-refs": {
-        "{basename}.java": "javafx-presentation/FXPresenter.java.qute",
+        "{basename}.java": "javafx-presentation/JFXPresentation.java.qute",
         "Slide.java": "javafx-presentation/Slide.java",
         "Presentation.java": "javafx-presentation/Presentation.java",
         "Slide1Controller.java": "javafx-presentation/Slide1Controller.java",

@@ -3,13 +3,13 @@ import javafx.geometry.Rectangle2D;
 import javafx.scene.layout.Pane;
 import javafx.stage.Screen;
 
-public class Presentation extends Pane {
+public class PresentationContainer extends Pane {
 
     private List<Slide> slides;
     private int index = 0;
     private Slide current;
 
-    public Presentation(List<Slide> slides) {
+    public PresentationContainer(List<Slide> slides) {
         this.slides = slides;
     }
 

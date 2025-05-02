@@ -27,7 +27,7 @@ public class JFXPresentation extends Application {
                 new Slide("slide1.fxml"),
                 new Slide("slide2.fxml"));
 
-        final Presentation presentation = new Presentation(slides);
+        final PresentationContainer presentation = new PresentationContainer(slides);
         final Scene scene = new Scene(presentation);
         scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
         scene.setOnKeyReleased(new EventHandler<KeyEvent>() {
