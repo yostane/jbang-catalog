@@ -16,15 +16,12 @@
 //FILES qr-jbang-devoxxuk25.png
 
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
-import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 public class jbang_devoxxuk2025 extends Application {
@@ -32,14 +29,15 @@ public class jbang_devoxxuk2025 extends Application {
     @Override
     public void start(Stage stage) throws Exception {
 
-        final Presentation presentation = new Presentation();
-        presentation.addSlide(new Slide("slide1.fxml"));
-        presentation.addSlide(new Slide("slide2.fxml"));
-        presentation.addSlide(new Slide("slide3.fxml"));
+        List<Slide> slides = List.of(
+                new Slide("slide1.fxml"),
+                new Slide("slide2.fxml"),
+                new Slide("slide3.fxml"));
 
+        final Presentation presentation = new Presentation(slides);
         final Scene scene = new Scene(presentation);
         scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
-        var keyEventHandler = new EventHandler<KeyEvent>() {
+        scene.setOnKeyReleased(new EventHandler<KeyEvent>() {
             public void handle(final KeyEvent keyEvent) {
                 if (keyEvent.getCode() == KeyCode.LEFT) {
                     presentation.previousSlidePlease();
@@ -47,13 +45,10 @@ public class jbang_devoxxuk2025 extends Application {
                     presentation.nextSlidePlease();
                 }
             }
-        };
-        scene.setOnKeyReleased(keyEventHandler);
+        });
         stage.setScene(scene);
         stage.setFullScreen(true);
         presentation.start();
-        List<Screen> screens = Screen.getScreens();
-        Logger.getGlobal().log(Level.INFO, "loaded scenes {0}", screens.size());
         stage.show();
     }
 

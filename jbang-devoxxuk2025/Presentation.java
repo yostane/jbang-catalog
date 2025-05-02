@@ -1,25 +1,16 @@
-import java.util.ArrayList;
 import java.util.List;
-import javafx.event.EventHandler;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Group;
-import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
 import javafx.stage.Screen;
 
 public class Presentation extends Group {
 
-    private List<Slide> slides = new ArrayList<>();
-    private int index;
+    private List<Slide> slides;
+    private int index = 0;
     private Slide current;
-    public EventHandler<KeyEvent> keyEventHandler;
 
-    public void addSlide(Slide slide) {
-        addSlide(slides.size(), slide);
-    }
-
-    public void addSlide(int index, Slide slide) {
-        slides.add(index, slide);
+    public Presentation(List<Slide> slides) {
+        this.slides = slides;
     }
 
     public void previousSlidePlease() {

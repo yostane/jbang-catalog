@@ -20,13 +20,14 @@
       <Label styleClass="speaker-line" text="blog.worldline.tech / youtube.com/@TechAtWorldline"/>
       <Label styleClass="please-visit" text="Please leave a review 🖋️"/>
       <Label styleClass="please-visit" text="Presentation material 👇"/>
-      <ImageView fitHeight="318.0" fitWidth="575.0" pickOnBounds="true" preserveRatio="true">
-        <image>
-          <Image url="@qr-jbang-devoxxuk25.png"/>
-        </image>
-      </ImageView>
-      <Label text="jbang devoxxuk-2025@yostane">
-    </Label>
+      <HBox alignment="center" spacing="10">
+        <Label styleClass="cli" text="jbang devoxxuk-2025@yostane"/>
+        <ImageView fitHeight="318.0" fitWidth="575.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@qr-jbang-devoxxuk25.png"/>
+          </image>
+        </ImageView>
+      </HBox>
     </VBox>
   </children>
 </fx:root>

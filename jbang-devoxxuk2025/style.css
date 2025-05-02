@@ -28,6 +28,11 @@
     -fx-spacing: 1em;
 }
 
+.cli {
+    -fx-font-family: "Courier New";
+    -fx-background-color: rgb(255, 255, 255);
+}
+
 .demo {
     -fx-font-size: 58pt;
     -fx-font-weight: bold;
