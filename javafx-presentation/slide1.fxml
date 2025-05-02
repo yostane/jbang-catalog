@@ -4,19 +4,16 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-<fx:root id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" styleClass="root" stylesheets="@style.css" type="AnchorPane" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" styleClass="slide-root" stylesheets="@style.css" type="AnchorPane" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Slide1Controller">
   <children>
 
-    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-      <children>
-        <Label styleClass="h1" text="Presentation made with JavaFX" textAlignment="CENTER" HBox.hgrow="ALWAYS">
-          <font>
-            <Font name="Courier New" size="13.0"/>
-          </font>
-        </Label>
-      </children>
-    </HBox>
-    <Button layoutX="290.0" layoutY="321.0" mnemonicParsing="false" onAction="#handleClick" text="Click me"/>
+    <VBox alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <HBox alignment="CENTER">
+        <Label fx:id="titleLabel" styleClass="h1" text="Presentation made with JavaFX" textAlignment="CENTER" HBox.hgrow="ALWAYS"/>
+        <Button onAction="#handleButtonAction" text="Click me"/>
+      </HBox>
+    </VBox>
   </children>
 </fx:root>

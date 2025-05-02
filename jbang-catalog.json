@@ -56,6 +56,7 @@
         "{basename}.java": "javafx-presentation/FXPresenter.java.qute",
         "Slide.java": "javafx-presentation/Slide.java",
         "Presentation.java": "javafx-presentation/Presentation.java",
+        "Slide1Controller.java": "javafx-presentation/Slide1Controller.java",
         "slide1.fxml": "javafx-presentation/slide1.fxml",
         "slide2.fxml": "javafx-presentation/slide2.fxml",
         "style.css": "javafx-presentation/style.css"

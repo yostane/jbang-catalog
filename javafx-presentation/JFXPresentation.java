@@ -5,35 +5,43 @@
 //JAVA 21
 //SOURCES Slide.java
 //SOURCES Presentation.java
+//SOURCES Slide1Controller.java
 //FILES style.css
 //FILES slide1.fxml
 //FILES slide2.fxml
 
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
-import javafx.stage.Screen;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 
-public class {baseName} extends Application {
+public class JFXPresentation extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
 
-        final Presentation presentation = new Presentation();
-        presentation.addSlide(new Slide("slide1.fxml"));
-        presentation.addSlide(new Slide("slide2.fxml"));
+        List<Slide> slides = List.of(
+                new Slide("slide1.fxml"),
+                new Slide("slide2.fxml"));
 
+        final Presentation presentation = new Presentation(slides);
         final Scene scene = new Scene(presentation);
         scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
+        scene.setOnKeyReleased(new EventHandler<KeyEvent>() {
+            public void handle(final KeyEvent keyEvent) {
+                if (keyEvent.getCode() == KeyCode.LEFT) {
+                    presentation.previousSlidePlease();
+                } else if (keyEvent.getCode() == KeyCode.RIGHT) {
+                    presentation.nextSlidePlease();
+                }
+            }
+        });
         stage.setScene(scene);
         stage.setFullScreen(true);
         presentation.start();
-        List<Screen> screens = Screen.getScreens();
-        Logger.getGlobal().log(Level.INFO, "loaded scenes {0}", screens.size());
         stage.show();
     }
 
