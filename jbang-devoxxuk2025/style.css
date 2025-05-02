@@ -1,5 +1,5 @@
 .root {
-    -fx-font-size: 22px;
+    -fx-font-size: 22pt;
     -fx-font-family: "Helvetica";
     -fx-background-color: rgb(255, 255, 255);
     -fx-text-align: center;
@@ -7,21 +7,30 @@
 }
 
 .h1 {
-    -fx-font-size: 46px;
+    -fx-font-size: 46pt;
 }
 
 .speaker-line {
     -fx-font-size: 28px;
+    -fx-text-fill: rgb(46, 0, 71);
 }
 
 .please-visit {
-    -fx-margin-top: 20px;
-    -fx-margin-bottom: 20px;
+    -fx-font-size: 30pt;
+    -fx-padding: 20px;
     -fx-text-style: italic;
 }
 
+.thank-you {
+    -fx-padding: 20px;
+    -fx-font-size: 60pt;
+    -fx-font-weight: bold;
+    -fx-padding-bottom: 50px;
+    -fx-spacing: 1em;
+}
+
 .demo {
-    -fx-font-size: 58px;
+    -fx-font-size: 58pt;
     -fx-font-weight: bold;
     -fx-text-fill: rgb(29, 21, 97);
 }

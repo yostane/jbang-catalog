@@ -5,6 +5,7 @@
 //SOURCES Slide.java
 //SOURCES Presentation.java
 //SOURCES Slide1Controller.java
+//SOURCES Slide3Controller.java
 //FILES style.css
 //FILES slide1.fxml
 //FILES slide2.fxml

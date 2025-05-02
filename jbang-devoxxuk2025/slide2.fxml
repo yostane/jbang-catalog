@@ -8,11 +8,7 @@
 
     <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
       <children>
-        <Label styleClass="speaker-line" text="Yassine Benabbas - @yostane"/>
-        <Label styleClass="speaker-line" text="DevRel enginner @ Worldline / teacher / Lille Android GDG"/>
-        <Label styleClass="please-visit" text="Please visit:"/>
-        <Label styleClass="speaker-line" text="blog.worldline.tech"/>
-        <Label styleClass="speaker-line" text="youtube.com/@TechAtWorldline"/>
+        <Label styleClass="demo" text="Demo time!"/>
       </children>
     </VBox>
   </children>
