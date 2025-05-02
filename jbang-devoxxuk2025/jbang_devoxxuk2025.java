@@ -50,7 +50,7 @@ public class jbang_devoxxuk2025 extends Application {
         };
         scene.setOnKeyReleased(keyEventHandler);
         stage.setScene(scene);
-        // stage.setFullScreen(true);
+        stage.setFullScreen(true);
         presentation.start();
         List<Screen> screens = Screen.getScreens();
         Logger.getGlobal().log(Level.INFO, "loaded scenes {0}", screens.size());

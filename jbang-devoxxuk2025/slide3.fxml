@@ -25,6 +25,8 @@
           <Image url="@qr-jbang-devoxxuk25.png"/>
         </image>
       </ImageView>
+      <Label text="jbang devoxxuk-2025@yostane">
+    </Label>
     </VBox>
   </children>
 </fx:root>
