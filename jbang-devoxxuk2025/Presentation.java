@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 import javafx.event.EventHandler;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Group;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
@@ -51,16 +52,17 @@ public class Presentation extends Group {
     }
 
     private void scaleToFit() {
-        javafx.geometry.Rectangle2D screenBounds = Screen.getPrimary().getBounds();
+        Rectangle2D screenBounds = Screen.getPrimary().getBounds();
         double prefWidth = current.getPrefWidth();
         double prefHeight = current.getPrefHeight();
         double scaleX = screenBounds.getWidth() / prefWidth;
         double scaleY = screenBounds.getHeight() / prefHeight;
+        double scale = Math.min(scaleX, scaleY);
         double centerX = (screenBounds.getWidth() / 2) - (prefWidth / 2);
         double centerY = (screenBounds.getHeight() / 2) - (prefHeight / 2);
         setTranslateX(centerX);
         setTranslateY(centerY);
-        setScaleX(scaleX);
-        setScaleY(scaleY);
+        setScaleX(scale);
+        setScaleY(scale);
     }
 }

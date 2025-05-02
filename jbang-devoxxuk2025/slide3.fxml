@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <fx:root id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" styleClass="root" stylesheets="@style.css" type="AnchorPane" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Slide3Controller">
   <children>
 
@@ -13,11 +15,16 @@
         <Label text="Thank you!"/>
         <Label fx:id="boomLabel" text="💥"/>
       </HBox>
-      <Label styleClass="please-visit" text="Please leave a review 🖋️"/>
       <Label styleClass="speaker-line" text="Yassine Benabbas @ yostane"/>
       <Label styleClass="speaker-line" text="DevRel enginner @ Worldline / teacher / Lille Android GDG"/>
-      <Label styleClass="speaker-line" text="blog.worldline.tech"/>
-      <Label styleClass="speaker-line" text="youtube.com/@TechAtWorldline"/>
+      <Label styleClass="speaker-line" text="blog.worldline.tech / youtube.com/@TechAtWorldline"/>
+      <Label styleClass="please-visit" text="Please leave a review 🖋️"/>
+      <Label styleClass="please-visit" text="Presentation material 👇"/>
+      <ImageView fitHeight="318.0" fitWidth="575.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+          <Image url="@qr-jbang-devoxxuk25.png"/>
+        </image>
+      </ImageView>
     </VBox>
   </children>
 </fx:root>

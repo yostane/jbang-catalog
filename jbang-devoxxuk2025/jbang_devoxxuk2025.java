@@ -13,6 +13,7 @@
 //FILES jbang_logo.png
 //FILES devoxx-uk-illustration.png
 //FILES WL_logo_turquoise.png
+//FILES qr-jbang-devoxxuk25.png
 
 import java.util.List;
 import java.util.logging.Level;
@@ -20,7 +21,6 @@ import java.util.logging.Logger;
 
 import javafx.application.Application;
 import javafx.event.EventHandler;
-import javafx.event.EventType;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;

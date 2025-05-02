@@ -20,6 +20,10 @@
     "javafx-presentation": {
       "script-ref": "javafx-presentation/FXPresenter.java",
       "description": "A presentation made with JavaFX"
+    },
+    "devoxxuk-2025": {
+      "script-ref": "jbang-devoxxuk2025/jbang_devoxxuk2025.java",
+      "description": "Devoxx UK 2025: scripting on the JVM with JBang"
     }
   },
   "templates": {
