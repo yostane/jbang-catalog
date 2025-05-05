@@ -33,7 +33,7 @@
       },
       "description": "Java 24 file wiht Implicitly Declared Classes and Instance Main Method"
     },
-    "cmpact-class": {
+    "compact-main": {
       "file-refs": {
         "{basename}.java": "templates/compact.java"
       },
