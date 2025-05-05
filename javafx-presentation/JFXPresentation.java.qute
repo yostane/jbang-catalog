@@ -4,7 +4,7 @@
 //DEPS org.openjfx:javafx-fxml:21
 //JAVA 21
 //SOURCES Slide.java
-//SOURCES Presentation.java
+//SOURCES PresentationContainer.java
 //SOURCES Slide1Controller.java
 //FILES style.css
 //FILES slide1.fxml
