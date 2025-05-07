@@ -29,11 +29,14 @@
       </HBox>
       <HBox alignment="center" spacing="10">
         <Label styleClass="cli" text="jbang devoxxuk-2025@yostane"/>
-        <ImageView fitHeight="318.0" fitWidth="575.0" pickOnBounds="true" preserveRatio="true">
-          <image>
-            <Image url="@qr-jbang-devoxxuk25.png"/>
-          </image>
-        </ImageView>
+        <VBox>
+          <ImageView fitHeight="318.0" fitWidth="575.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+              <Image url="@qr-jbang-devoxxuk25.png"/>
+            </image>
+          </ImageView>
+          <Label text="https://wrl.li/jbang-devoxxuk25"/>
+        </VBox>
       </HBox>
     </VBox>
   </children>
